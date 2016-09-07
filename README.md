@@ -1,8 +1,8 @@
 # CityOSAir
 
-W**elcome to the CityOSAir github!**
+**Welcome to the CityOSAir github!**
 
-![](https://github.com/appsmonkey/CityOSAir/blob/master/3Ddesign/fbthumb.png)
+![](https://cityos.io/theme/page/air/images/fbthumb.jpg)
 
 Thank you for your interest in creating your own CityOSAir device. In order to join the clean air movement, we will walk you through this step-by-step guide on creating your own device.
 
