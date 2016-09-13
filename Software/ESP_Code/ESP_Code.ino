@@ -3,12 +3,9 @@ extern "C" {
 #include "user_interface.h"
 }
 #endif
-//#include <TimerOne.h>
 
 #include <EasyScheduler.h>
 #include <ESP8266WiFi.h>
-//const char* ssid     = "Innbox-internet-7ec5c2";
-//const char* password = "INNBOX1201YUH001333";
 Schedular Task1;
 Schedular Task2;
 const char* host = "api.cityos.io";
@@ -78,40 +75,17 @@ void setup()
 {
  
     Serial.begin(115200);
-//WiFi.begin(ssid, password);
-  //WiFi.beginSmartConfig();
-  //while (WiFi.status() != WL_CONNECTED) {
-  //  delay(500);
-  //  Serial.print(".");
-  //}
     pinMode(conf,INPUT);
-pinMode(led , OUTPUT);
- Task1.start();
-Task2.start();
-
-
- 
+    pinMode(led , OUTPUT);
+    Task1.start();
+    Task2.start();
 }
 
 void loop()
 {
  
-  //sendData1();
-// Serial.println("sleep");
- // wifi_set_sleep_type(MODEM_SLEEP_T);
- //ESP.deepSleep(9 * 1000000);
-  
- // Serial.println(WiFi.RSSI());
- //sendDrop();
-// WiFi.forceSleepBegin();
- //delay(1);
-  
-
 Task1.check(configureWifi,100); //every 100ms do this task so you can configure device
  Task2.check(sendData1,10000);//wait 10 sec and send data 
- //ESP.deepSleep(1, WAKE_RF_DEFAULT);
-// delay(1);
- 
 }
 
 void configureWifi(){
